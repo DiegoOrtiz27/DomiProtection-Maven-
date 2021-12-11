@@ -49,7 +49,7 @@ public class ProductoService {
             System.out.println("Producto no existe(Delete)");
             
         }else{
-            System.out.println("dfdd");
+            System.out.println("Producto Eliminado");
             eliminado=productoDao.borrarProducto(idProducto);
         }
         return eliminado;

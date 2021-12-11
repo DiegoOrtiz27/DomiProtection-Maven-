@@ -56,11 +56,7 @@ public class ControladorIMG extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
       int idProducto = Integer.parseInt(request.getParameter("id"));
-       try {
-           pdao.listarIMG(idProducto, response);
-       } catch (SQLException ex) {
-           Logger.getLogger(ControladorIMG.class.getName()).log(Level.SEVERE, null, ex);
-       }
+      pdao.listarIMG(idProducto, response);
     }
     /**
      * Handles the HTTP <code>POST</code> method.
