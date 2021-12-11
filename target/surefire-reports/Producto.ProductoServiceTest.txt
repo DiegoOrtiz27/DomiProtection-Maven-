@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: Producto.ProductoServiceTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.91 sec
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.769 sec
+>>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d

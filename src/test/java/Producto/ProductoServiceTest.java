@@ -34,7 +34,11 @@ public class ProductoServiceTest {
      @Test
         public void testAddProducto() {
             Producto producto = new Producto();
+<<<<<<< HEAD
             producto.setId(4);
+=======
+            producto.setId(45);
+>>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d
             producto.setNombres("Prueba Producto");
             producto.setDescripcion("prueba para agregar producto al catalogo");
             producto.setPrecio(500);

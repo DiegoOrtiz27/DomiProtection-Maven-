@@ -144,29 +144,7 @@ public class ProductoDAO {
         } catch (Exception e) {
         }
     }
-    //Se hace peticion desde el test para agregar prodcuto.
-
-    public boolean agregarProducto1(Producto pd) {
-        String sql = "insert into producto(Nombres,Descripcion,Precio,Stock) values(?,?,?,?)";
-        boolean pasa = false;
-        try {
-            //Se crea conexion a la db.
-            con = cn.getConnection();
-            //Preparacion de peticion.
-            ps = con.prepareStatement(sql);
-            ps.setString(1, pd.getNombres());
-            ps.setString(2, pd.getDescripcion());
-            ps.setDouble(3, pd.getPrecio());
-            ps.setInt(4, pd.getStock());
-            //Se actualiza stock
-            ps.executeUpdate();
-            pasa = true;
-
-        } catch (Exception e) {
-            pasa = false;
-        }
-        return pasa;
-    }
+    
 
     //Se hace peticion a la base de datos para obtener toda la informacion de cada producto.
     public Producto listarId(int id) {
@@ -244,8 +222,114 @@ public class ProductoDAO {
         } catch (Exception e) {
         }
     }
+     //Se hace peticion a la base de datos para obtener la imagen.
+    public void listarIMG(int idProducto, HttpServletResponse response) throws SQLException {
+        Conexion cn = new Conexion();
+
+        Connection con = cn.getConnection();
+        PreparedStatement ps;
+        ResultSet rs;
+        ps = con.prepareStatement("SELECT foto FROM producto where idProducto=?");
+        OutputStream oImage;
+        try {
+
+            ps.setInt(1, idProducto);
+
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                byte barray[] = rs.getBytes(1);
+                response.setContentType("image/jpeg");
+                oImage = response.getOutputStream();
+                oImage.write(barray);
+                oImage.flush();
+                oImage.close();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (con != null) {
+                    con.close();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
 
     //--METODOS PARA TEST--
+    
+    //Se hace peticion desde el test para agregar prodcuto.
+    public boolean agregarProducto1(Producto pd) {
+        String sql = "insert into producto(Nombres,Descripcion,Precio,Stock) values(?,?,?,?)";
+        boolean pasa = false;
+        try {
+            //Se crea conexion a la db.
+            con = cn.getConnection();
+            //Preparacion de peticion.
+            ps = con.prepareStatement(sql);
+            ps.setString(1, pd.getNombres());
+            ps.setString(2, pd.getDescripcion());
+            ps.setDouble(3, pd.getPrecio());
+            ps.setInt(4, pd.getStock());
+            //Se actualiza stock
+            ps.executeUpdate();
+            pasa = true;
+
+        } catch (Exception e) {
+            pasa = false;
+        }
+        return pasa;
+    }
+    
+    //Metodo para borrar producto
+    public boolean borrarProducto(int id) {
+        //Se crea la peticion sql.
+        String sql = "delete from producto where IdProducto=" + id;
+        boolean pasa;
+        try {
+            //Conexion a la db.
+            con = cn.getConnection();
+            //Se prepara peticion.
+            ps = con.prepareStatement(sql);
+            //Se envia peticion.
+            ps.executeUpdate();
+            pasa = true;
+        } catch (Exception e) {
+            pasa = false;
+        }
+        return pasa;
+    }
+    
+    
+    //Metodo para actualizar producto
+    public boolean actualizarProducto1(Producto p) {
+        //Se declara peticion sql.
+        String sql = "update producto set Nombres=?,Descripcion=?,Precio=?,Stock=? where IdProducto=?";
+        boolean pasa = false;
+        try {
+            //Se crea conexion a la db.
+            con = cn.getConnection();
+            //Preparacion de peticion.
+            ps = con.prepareStatement(sql);
+            ps.setString(1, p.nombres);
+            ps.setString(2, p.getDescripcion());
+            ps.setDouble(3, p.getPrecio());
+            ps.setInt(4, p.getStock());
+            ps.setInt(5, p.getId());
+            //Se actualiza stock
+            ps.executeUpdate();
+            pasa = true;
+        } catch (Exception e) {
+            pasa = false;
+        }
+        return pasa;
+    }
+<<<<<<< HEAD
+
+=======
+    
+    
     //Metodo para buscar la exitesn
     public boolean productoExistente(int x, int y) {
         //Se crea la peticion sql.
@@ -290,47 +374,6 @@ public class ProductoDAO {
         return productoExiste;
     }
 
-    //Metodo para borrar producto
-    public boolean borrarProducto(int id) {
-        //Se crea la peticion sql.
-        String sql = "delete from producto where IdProducto=" + id;
-        boolean pasa;
-        try {
-            //Conexion a la db.
-            con = cn.getConnection();
-            //Se prepara peticion.
-            ps = con.prepareStatement(sql);
-            //Se envia peticion.
-            ps.executeUpdate();
-            pasa = true;
-        } catch (Exception e) {
-            pasa = false;
-        }
-        return pasa;
-    }
-    //Metodo para actualizar producto
-
-    public boolean actualizarProducto1(Producto p) {
-        //Se declara peticion sql.
-        String sql = "update producto set Nombres=?,Descripcion=?,Precio=?,Stock=? where IdProducto=?";
-        boolean pasa = false;
-        try {
-            //Se crea conexion a la db.
-            con = cn.getConnection();
-            //Preparacion de peticion.
-            ps = con.prepareStatement(sql);
-            ps.setString(1, p.nombres);
-            ps.setString(2, p.getDescripcion());
-            ps.setDouble(3, p.getPrecio());
-            ps.setInt(4, p.getStock());
-            ps.setInt(5, p.getId());
-            //Se actualiza stock
-            ps.executeUpdate();
-            pasa = true;
-        } catch (Exception e) {
-            pasa = false;
-        }
-        return pasa;
-    }
-
+    
+>>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d
 }

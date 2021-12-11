@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<<<<<<< HEAD
-<testsuite tests="1" failures="0" name="Producto.ProductoServiceTest" time="1.728" errors="0" skipped="0">
-  <properties>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="java.vm.version" value="15.0.2+7-27"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ASUS\OneDrive\Escritorio\mavenproject2"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
-=======
-<testsuite tests="1" failures="0" name="Producto.ProductoServiceTest" time="8.694" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="Empleado.EmpleadoServiceTest" time="2.966" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17+35"/>
@@ -17,7 +7,6 @@
     <property name="maven.multiModuleProjectDirectory" value="C:\Users\emanu\Desktop\Proyectos\DomiProtection-Maven-"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
->>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="path.separator" value=";"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
@@ -25,13 +14,9 @@
     <property name="user.script" value=""/>
     <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="test" value="Producto.ProductoServiceTest#testAddProducto"/>
+    <property name="test" value="Empleado.EmpleadoServiceTest#testUpdateEmpleado"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-<<<<<<< HEAD
-    <property name="user.dir" value="C:\Users\ASUS\OneDrive\Escritorio\mavenproject2"/>
-=======
     <property name="user.dir" value="C:\Users\emanu\Desktop\Proyectos\DomiProtection-Maven-"/>
->>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="17+35"/>
     <property name="os.arch" value="amd64"/>
@@ -60,13 +45,8 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-<<<<<<< HEAD
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Producto.ProductoServiceTest#testAddProducto -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.4\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-15.0.2"/>
-=======
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Producto.ProductoServiceTest#testAddProducto -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Empleado.EmpleadoServiceTest#testUpdateEmpleado -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.home" value="C:\Program Files\Eclipse Foundation\jdk-17.0.0.35-hotspot"/>
->>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -82,9 +62,5 @@
     <property name="java.vendor.version" value="Temurin-17+35"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-<<<<<<< HEAD
-  <testcase classname="Producto.ProductoServiceTest" name="testAddProducto" time="1.728"/>
-=======
-  <testcase classname="Producto.ProductoServiceTest" name="testAddProducto" time="8.694"/>
->>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d
+  <testcase classname="Empleado.EmpleadoServiceTest" name="testUpdateEmpleado" time="2.966"/>
 </testsuite>
