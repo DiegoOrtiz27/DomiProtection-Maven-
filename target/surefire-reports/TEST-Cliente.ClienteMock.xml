@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite tests="1" failures="0" name="Cliente.ClienteMock" time="1.311" errors="0" skipped="0">
+=======
+<testsuite tests="1" failures="0" name="Cliente.ClienteMock" time="1.547" errors="0" skipped="0">
+>>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -60,5 +64,9 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="Cliente.ClienteMock" name="agregarCliente" time="1.311"/>
+=======
+  <testcase classname="Cliente.ClienteMock" name="agregarCliente" time="1.547"/>
+>>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
 </testsuite>

@@ -330,6 +330,48 @@ public class ClienteDAO {
          }
          return pasa;
      }
+      public boolean clienteExistente(int x, int y) {
+        //Se crea la peticion sql.
+        String sql = "select max(IdCliente) from cliente";
+        boolean productoExiste = false;
+        int tamano = 0;
+        Cliente cl = new Cliente();
+        try {
+            con = cn.getConnection();
+            Statement smt = con.createStatement();
+            rs = smt.executeQuery(sql);
+            while (rs.next()) {
+                tamano = rs.getInt("max(IdCliente)");
+            }
+        } catch (Exception e) {
+        }
+        for (int i = 0; i <= tamano; i++) {
+            //Se trae cada producto de la db para verificar existencia.
+            cl = listarId(i);
+            //Aagregar
+            switch (y) {
+                case 1:
+                    if (x <= cl.getId()) {
+                        System.out.println("Entro en metodo de verificacion de existencia");
+                        productoExiste = true;
+                        return productoExiste;
+                    }
+                    break; // break es opcional
+            //Borrar y actualizar
+                case 2:
+                    if (x == cl.getId()) {
+                        System.out.println("Entro en metodo de verificacion de existencia");
+                        productoExiste = true;
+                        return productoExiste;
+                    }
+                    break; // break es opcional
+                default:
+                // Declaraciones
+            }
+
+        }
+        return productoExiste;
+    }
      //Metodo para eliminar cliente de la db.
      public void delete(int id){
          //Se crea la peticion sql.

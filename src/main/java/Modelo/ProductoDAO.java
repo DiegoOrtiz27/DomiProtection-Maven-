@@ -325,6 +325,12 @@ public class ProductoDAO {
         }
         return pasa;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
     
     
     //Metodo para buscar la exitesn
@@ -372,4 +378,8 @@ public class ProductoDAO {
     }
 
     
+<<<<<<< HEAD
+=======
+>>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d
+>>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
 }

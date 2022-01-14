@@ -13,9 +13,15 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
+<<<<<<< HEAD
 
 import org.mockito.Mock;
 
+=======
+import org.mockito.Mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+>>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
 import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
 
@@ -39,6 +45,7 @@ public class ClienteMock {
     @Test
     public void agregarCliente() {
         Cliente c = new Cliente();
+<<<<<<< HEAD
         c.setDni("71731661");
         c.setNombre("Ossman Munoz");
         c.setDireccion("cra 51");
@@ -64,6 +71,27 @@ public class ClienteMock {
     @Test
     public void eliminarCliente() {
         int id = 23;
+=======
+        c.setDni("10");
+        c.setNombre("Diego ortiz");
+        c.setDireccion("cra 51");
+        c.setTelefono("123456");
+        c.setCorreo("diego@gmail.com");
+        c.setPassword("123");
+        boolean resultado = clienteDao.Agregar1(c);
+        assertEquals(true, resultado);
+    }
+
+    @Test
+    public void verCliente() {
+        boolean resultado = clienteDao.buscar1("10236229034");
+        assertEquals(resultado, true);
+    }
+
+    @Test
+    public void eliminarCliente() {
+        int id = 4;
+>>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
         assertEquals(true, clienteDao.delete1(id));
     }
 

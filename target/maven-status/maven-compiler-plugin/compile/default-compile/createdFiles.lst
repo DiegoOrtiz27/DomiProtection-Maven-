@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+=======
+Modelo\m.class
+Config\Conexion.class
+Modelo\ClienteDAO.class
+Modelo\historialCompra.class
+Modelo\Nodo.class
+Modelo\Venta.class
+Modelo\EmpleadoDAO.class
+Controlador\Controlador1.class
+Modelo\Empleado.class
+Modelo\ProductoDAO.class
+Modelo\CarritoDAO.class
+Modelo\Carrito.class
+Modelo\Cliente.class
+Modelo\VentaDAO.class
+Controlador\Controlador.class
+Modelo\Producto.class
+>>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
