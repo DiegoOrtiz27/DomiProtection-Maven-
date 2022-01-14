@@ -62,13 +62,7 @@
 
             }
 
-            body{
-                background: black;
-                font-size:1.2em; 
-                font-family: Garamond,serif ;
-                overflow-x: hidden;
-            }
-
+           
             .btn-whatsapp {
                 display:block;
                 width:4em;

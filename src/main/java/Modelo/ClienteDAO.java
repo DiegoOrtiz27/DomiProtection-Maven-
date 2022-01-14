@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -192,6 +193,7 @@ public class ClienteDAO {
     
     //Metodo para agregar cliente a la bd.
      public boolean Agregar1(Cliente cl) {
+         boolean pasa = false;
         //Se crea la peticion sql.
         String sql="insert into cliente(Dni,Nombres,Direccion,Telefono,Email,Password)values(?,?,?,?,?,?)";
         try{
@@ -207,10 +209,12 @@ public class ClienteDAO {
             ps.setString(5,cl.getCorreo());
             ps.setString(6,cl.getPassword());
             //Se envia peticion.
-            ps.executeUpdate();     
+            ps.executeUpdate(); 
+            pasa=true;
         }catch(Exception e){
+            pasa=false;
         }
-        return client=true;
+        return pasa;
     }
       public int Agregar(Cliente cl) {
         //Se crea la peticion sql.
@@ -281,10 +285,37 @@ public class ClienteDAO {
         }
         return r;
      }
+       public boolean Actualizar1(Cliente cl){
+          //Se crea la peticion sql.
+          boolean pasa = false;
+        String sql="update cliente set Dni=?,Nombres=?,Direccion=?,Telefono=?,Email=?,Password=? where IdCliente=?";
+        try{
+            //Conexion a la db.
+            con = cn.getConnection();
+            //Se prepara peticion.
+            ps=con.prepareStatement(sql);
+            //Se obtienen los datos del cliente que recibe el metodo en los parametros.
+            ps.setString(1,cl.getDni());
+            ps.setString(2,cl.getNombre());
+            ps.setString(3,cl.getDireccion());
+            ps.setString(4,cl.getTelefono());
+            ps.setString(5,cl.getCorreo());
+            ps.setString(6,cl.getPassword());
+            ps.setInt(7,cl.getId());
+            //Se envia peticion.
+            ps.executeUpdate();
+            pasa= true;
+        }catch(Exception e){
+            pasa=false;
+        }
+        return pasa;
+     }
+      
      
          //Metodo para eliminar cliente de la db.
      public boolean delete1(int id){
          //Se crea la peticion sql.
+         boolean pasa = false;
          String sql="delete from cliente where idCliente="+id;
          try{
             //Conexion a la db.
@@ -293,11 +324,11 @@ public class ClienteDAO {
             ps=con.prepareStatement(sql);
             //Se envia peticion.
             ps.executeUpdate();
-            client = true;
+            pasa = true;
          }catch(Exception e){
-             client = false;
+             pasa = false;
          }
-         return client;
+         return pasa;
      }
      //Metodo para eliminar cliente de la db.
      public void delete(int id){
@@ -314,5 +345,48 @@ public class ClienteDAO {
          }
      }
 
-     
+      //Metodo para buscar la exitesn
+    public boolean clienteExistente(int x, int y) {
+        //Se crea la peticion sql.
+        String sql = "select max(IdProducto) from producto";
+        boolean productoExiste = false;
+        int tamano = 0;
+        Cliente c = new Cliente();
+        try {
+            con = cn.getConnection();
+            Statement smt = con.createStatement();
+            rs = smt.executeQuery(sql);
+            while (rs.next()) {
+                tamano = rs.getInt("max(IdCliente)");
+            }
+        } catch (Exception e) {
+        }
+        for (int i = 0; i <= tamano; i++) {
+            //Se trae cada producto de la db para verificar existencia.
+            c = listarId(i);
+            //Aagregar
+            switch (y) {
+                case 1:
+                    if (x <= c.getId()) {
+                        System.out.println("Entro en metodo de verificacion de existencia");
+                        productoExiste = true;
+                        return productoExiste;
+                    }
+                    break; // break es opcional
+            //Borrar y actualizar
+                case 2:
+                    if (x == c.getId()) {
+                        System.out.println("Entro en metodo de verificacion de existencia");
+                        productoExiste = true;
+                        return productoExiste;
+                    }
+                    break; // break es opcional
+                default:
+                // Declaraciones
+            }
+
+        }
+        return productoExiste;
+    }
+
 }

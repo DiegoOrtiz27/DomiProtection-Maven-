@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -17,12 +18,14 @@ import java.sql.SQLException;
  */
 public class EmpleadoDAO {
 
-    //Se crean variables para la conexion a la base de datos.
+     //Conectando la Base de datos
     Conexion cn = new Conexion();
     Connection con;
     PreparedStatement ps;
+    //Emnpezamos Listando los Datos
+    Statement smt;
     ResultSet rs;
-    int r=0;
+    int r = 0;
 
     //Declaracion de nodos base.
     private Nodo apuntador = null;
@@ -170,6 +173,7 @@ public class EmpleadoDAO {
             //Se envia peticion.
             rs=ps.executeQuery();
             while(rs.next()){
+                em.setId(rs.getInt(1));
                 em.setDni(rs.getString(2));
                 em.setNom(rs.getString(3));
                 em.setTel(rs.getString(4));
@@ -217,5 +221,121 @@ public class EmpleadoDAO {
          }catch(Exception e){
          }
      }
-   
+     
+     //--METODOS PARA TEST--
+     
+     //Metodo para agregar empleado.
+    public boolean agregarEmpleado(Empleado em) {
+        boolean pasa = false;
+        String sql="insert into empleado(Dni,Nombres,Telefono,Estado,User)values(?,?,?,?,?)";
+        try{
+            //Conexion a la db.
+            con = cn.getConnection();
+            //Se prepara peticion.
+            ps=con.prepareStatement(sql);
+            //Se obtienen los datos del empleado que recibe el metodo en los parametros.
+            ps.setString(1,em.getDni());
+            ps.setString(2,em.getNom());
+            ps.setString(3,em.getTel());
+            ps.setString(4,em.getEstado());
+            ps.setString(5,em.getUser());
+            //Se envia peticion.
+            ps.executeUpdate();  
+            pasa=true;
+        }catch(Exception e){
+            pasa=false;
+        }
+        return pasa;
+    }
+    
+    //Metodo para borrar empleado
+    public boolean borrarEmpleado(int id) {
+
+        boolean pasa=false;
+        //Se crea la peticion sql.
+         String sql="delete from empleado where idEmpleado="+id;
+         try{
+            //Conexion a la db.
+            con = cn.getConnection();
+            //Se prepara peticion.
+            ps=con.prepareStatement(sql);
+            //Se envia peticion.
+            ps.executeUpdate();
+            pasa=true;
+         }catch(Exception e){
+             pasa=false;
+         }
+        return pasa;
+    }
+    
+    //Metodo para actualizar producto
+    public boolean actualizarEmpleado(Empleado em) {
+
+        boolean pasa = false;
+         //Se crea la peticion sql.
+        String sql="update empleado set Dni=?,Nombres=?,Telefono=?,Estado=?,User=? where IdEmpleado=?";
+        try{
+            //Conexion a la db.
+            con = cn.getConnection();
+            //Se prepara peticion.
+            ps=con.prepareStatement(sql);
+            //Se obtienen los datos del empleado que recibe el metodo en los parametros.
+            ps.setString(1,em.getDni());
+            ps.setString(2,em.getNom());
+            ps.setString(3,em.getTel());
+            ps.setString(4,em.getEstado());
+            ps.setString(5, em.getUser());
+            ps.setInt(6, em.getId());
+            //Se envia peticion.
+            ps.executeUpdate();
+            pasa=true;
+        }catch(Exception e){
+            pasa=false;
+        }
+        return pasa;
+    }
+    
+     //Metodo para buscar la exitesn
+    public boolean empleadoExistente(int x, int y) {
+        //Se crea la peticion sql.
+        String sql = "select max(IdEmpleado) from empleado";
+        boolean empleadoExiste = false;
+        int tamano = 0;
+        Empleado em = new Empleado();
+        try {
+            con = cn.getConnection();
+            smt = con.createStatement();
+            rs = smt.executeQuery(sql);
+            while (rs.next()) {
+                tamano = rs.getInt("max(IdEmpleado)");
+            }
+        } catch (Exception e) {
+        }
+        for (int i = 1; i <= tamano; i++) {
+            //Se trae cada producto de la db para verificar existencia.
+            em= listarId(i);
+            //Aagregar
+            switch (y) {
+                case 1:
+                    if (x <= em.getId()) {
+                        System.out.println("Existe empleado(Agregar)");
+                        empleadoExiste = true;
+                        return empleadoExiste;
+                    }
+                    break; // break es opcional
+            //Borrar y actualizar
+                case 2:
+                    if (x == em.getId()) {
+                        System.out.println("Wxiste empleado(Actualizar/Borrar)");
+                        empleadoExiste = true;
+                        return empleadoExiste;
+                    }
+                    break; // break es opcional
+                default:
+                // Declaraciones
+            }
+
+        }
+        return empleadoExiste;
+    }
 }

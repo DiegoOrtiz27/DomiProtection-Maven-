@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: Empleado.EmpleadoServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.366 sec <<< FAILURE! - in Empleado.EmpleadoServiceTest
+testDeleteEmpleado(Empleado.EmpleadoServiceTest)  Time elapsed: 1.234 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<true> but was:<false>
+	at Empleado.EmpleadoServiceTest.testDeleteEmpleado(EmpleadoServiceTest.java:58)
+
+testAddEmpleado(Empleado.EmpleadoServiceTest)  Time elapsed: 0.013 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<true> but was:<false>
+	at Empleado.EmpleadoServiceTest.testAddEmpleado(EmpleadoServiceTest.java:42)
+
