@@ -387,48 +387,6 @@ public class ClienteDAO {
          }
      }
 
-      //Metodo para buscar la exitesn
-    public boolean clienteExistente(int x, int y) {
-        //Se crea la peticion sql.
-        String sql = "select max(IdProducto) from producto";
-        boolean productoExiste = false;
-        int tamano = 0;
-        Cliente c = new Cliente();
-        try {
-            con = cn.getConnection();
-            Statement smt = con.createStatement();
-            rs = smt.executeQuery(sql);
-            while (rs.next()) {
-                tamano = rs.getInt("max(IdCliente)");
-            }
-        } catch (Exception e) {
-        }
-        for (int i = 0; i <= tamano; i++) {
-            //Se trae cada producto de la db para verificar existencia.
-            c = listarId(i);
-            //Aagregar
-            switch (y) {
-                case 1:
-                    if (x <= c.getId()) {
-                        System.out.println("Entro en metodo de verificacion de existencia");
-                        productoExiste = true;
-                        return productoExiste;
-                    }
-                    break; // break es opcional
-            //Borrar y actualizar
-                case 2:
-                    if (x == c.getId()) {
-                        System.out.println("Entro en metodo de verificacion de existencia");
-                        productoExiste = true;
-                        return productoExiste;
-                    }
-                    break; // break es opcional
-                default:
-                // Declaraciones
-            }
-
-        }
-        return productoExiste;
-    }
+    
 
 }
