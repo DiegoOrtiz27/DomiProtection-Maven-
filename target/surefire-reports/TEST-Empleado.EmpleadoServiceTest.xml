@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Empleado.EmpleadoServiceTest" time="1.366" tests="3" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Empleado.EmpleadoServiceTest" time="2.972" tests="3" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -11,25 +10,10 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="path.separator" value=";"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-=======
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="Empleado.EmpleadoServiceTest" time="2.966" errors="0" skipped="0">
-  <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="17+35"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Foundation\jdk-17.0.0.35-hotspot\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\emanu\Desktop\Proyectos\DomiProtection-Maven-"/>
-    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
-    <property name="java.vendor.url" value="https://adoptium.net/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=";"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
->>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
     <property name="sun.os.patch.level" value=""/>
     <property name="user.script" value=""/>
     <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-<<<<<<< HEAD
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\ASUS\OneDrive\Escritorio\mavenproject2"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
@@ -44,7 +28,7 @@
     <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-12.4\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="C:\Program Files\NetBeans-12.4\netbeans\java\maven\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\app\ASUS\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Apache Software Foundation\Tomcat 9.0_Tomcat09\bin;C:\Program Files\NetMake\v9-php73\components\php;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;;C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ASUS\AppData\Roaming\npm;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\app\ASUS\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Apache Software Foundation\Tomcat 9.0_Tomcat09\bin;C:\Program Files\NetMake\v9-php73\components\php;C:\Users\ASUS\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.10;C:\Users\ASUS\Downloads\chromedriver_win32;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;;C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ASUS\AppData\Roaming\npm;."/>
     <property name="maven.conf" value="C:\Program Files\NetBeans-12.4\netbeans\java\maven\bin\../conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="59.0"/>
@@ -78,7 +62,7 @@
     <property name="netbeans.deploy.clientUrlPart" value="/index.jsp"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testDeleteEmpleado" classname="Empleado.EmpleadoServiceTest" time="1.234">
+  <testcase name="testDeleteEmpleado" classname="Empleado.EmpleadoServiceTest" time="2.771">
     <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<true> but was:<false>
 	at Empleado.EmpleadoServiceTest.testDeleteEmpleado(EmpleadoServiceTest.java:58)
 ]]></failure>
@@ -87,7 +71,7 @@
     <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 ]]></system-err>
   </testcase>
-  <testcase name="testAddEmpleado" classname="Empleado.EmpleadoServiceTest" time="0.013">
+  <testcase name="testAddEmpleado" classname="Empleado.EmpleadoServiceTest" time="0.001">
     <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<true> but was:<false>
 	at Empleado.EmpleadoServiceTest.testAddEmpleado(EmpleadoServiceTest.java:42)
 ]]></failure>
@@ -96,56 +80,11 @@ true
 El empleado ya esta agregado(Agregar)
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateEmpleado" classname="Empleado.EmpleadoServiceTest" time="0.01"/>
-=======
-    <property name="test" value="Empleado.EmpleadoServiceTest#testUpdateEmpleado"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\emanu\Desktop\Proyectos\DomiProtection-Maven-"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="17+35"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\emanu\AppData\Local\Temp\"/>
-    <property name="line.separator" value="
-"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
-    <property name="classworlds.conf" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\..\bin\m2.conf"/>
-    <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Eclipse Foundation\jdk-17.0.0.35-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Foundation\jdk-17.0.0.35-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Apache Software Foundation\Tomcat 10.0\bin;C:\Program Files\nodejs\;C:\Users\emanu\AppData\Local\Microsoft\WindowsApps;;C:\Users\emanu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\emanu\AppData\Roaming\npm;."/>
-    <property name="maven.conf" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\../conf"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="61.0"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\..\lib\jansi-native"/>
-    <property name="user.home" value="C:\Users\emanu"/>
-    <property name="user.timezone" value="America/Mexico_City"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="17"/>
-    <property name="user.name" value="emanu"/>
-    <property name="java.class.path" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
-    <property name="java.vm.specification.version" value="17"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Empleado.EmpleadoServiceTest#testUpdateEmpleado -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
-    <property name="java.home" value="C:\Program Files\Eclipse Foundation\jdk-17.0.0.35-hotspot"/>
-    <property name="user.language" value="es"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="17"/>
-    <property name="native.encoding" value="Cp1252"/>
-    <property name="java.vendor" value="Eclipse Adoptium"/>
-    <property name="maven.home" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\.."/>
-    <property name="file.separator" value="\"/>
-    <property name="java.version.date" value="2021-09-14"/>
-    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="java.vendor.version" value="Temurin-17+35"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
-  </properties>
-  <testcase classname="Empleado.EmpleadoServiceTest" name="testUpdateEmpleado" time="2.966"/>
->>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
+  <testcase name="testUpdateEmpleado" classname="Empleado.EmpleadoServiceTest" time="0.019">
+    <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<true> but was:<false>
+	at Empleado.EmpleadoServiceTest.testUpdateEmpleado(EmpleadoServiceTest.java:53)
+]]></failure>
+    <system-out><![CDATA[Empleado no existe(Update)
+]]></system-out>
+  </testcase>
 </testsuite>

@@ -84,7 +84,7 @@ public class Validar extends HttpServlet {
               if(em.getUser()!=null){
                   request.setAttribute("usuario", em);
                 
-                  request.getRequestDispatcher("Controlador1?menu=Principal").forward(request, response);
+                  request.getRequestDispatcher("./vistas/Principal.jsp").forward(request, response);
               }else{
                  
                   request.getRequestDispatcher("./vistas/validarEmpleado.jsp").forward(request, response);

@@ -1,20 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: Producto.ProductoServiceTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec <<< FAILURE! - in Producto.ProductoServiceTest
-testDeleteProducto(Producto.ProductoServiceTest)  Time elapsed: 0.013 sec  <<< FAILURE!
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.156 sec <<< FAILURE! - in Producto.ProductoServiceTest
+testUpdateProducto(Producto.ProductoServiceTest)  Time elapsed: 0.121 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<true> but was:<false>
-	at Producto.ProductoServiceTest.testDeleteProducto(ProductoServiceTest.java:57)
+	at Producto.ProductoServiceTest.testUpdateProducto(ProductoServiceTest.java:54)
 
-testAddProducto(Producto.ProductoServiceTest)  Time elapsed: 0.018 sec  <<< FAILURE!
+testDeleteProducto(Producto.ProductoServiceTest)  Time elapsed: 0.031 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<true> but was:<false>
-	at Producto.ProductoServiceTest.testAddProducto(ProductoServiceTest.java:42)
+	at Producto.ProductoServiceTest.testDeleteProducto(ProductoServiceTest.java:59)
 
-=======
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.91 sec
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.769 sec
->>>>>>> e6be92a2ffc1cc277e23453f835a028e60026d2d
->>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0

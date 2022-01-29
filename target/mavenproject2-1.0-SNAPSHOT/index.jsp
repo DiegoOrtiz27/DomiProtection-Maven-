@@ -18,8 +18,8 @@
         <style>
             .flip-card { 
                 perspective: 1000px;
-                width: 30rem;
-                height: 20rem;
+                width: 40rem;
+                height: 27rem;
             }
 
             .flip-card-inner {
@@ -45,6 +45,9 @@
                 backface-visibility: hidden;
                 border: 1px solid black;
                 justify-content: center;
+                border-radius: 25px;
+
+
 
             }
 
@@ -58,11 +61,14 @@
                 background-color: #bff2eb;
                 color: black;
                 transform: rotateY(180deg);
-                margin-top:3px;
 
             }
 
-           
+            body{
+                overflow-x: hidden;
+                font-family: Times New Roman, Times, serif;
+
+            }
             .btn-whatsapp {
                 display:block;
                 width:4em;
@@ -81,7 +87,7 @@
     </head>
     <!<!--Se coloca el tipo de letra desde aca, para que cuando 
     cambie por el controlador, lleve estos cambios-->
-    <body  class="text-dark">    
+    <body  class="text-dark" style="font-family: Times New Roman">    
         <%
             HttpSession sesion = request.getSession();
             //Conectando la Base de datos
@@ -158,10 +164,10 @@
                 <div class="border-dark flip-card-inner" >
                     <div class="flip-card-front" >
                         <div>
-                            <% out.println("<label>" + listaP.getProductos(i).getNombres() + "</label>");%>
+                            <% out.println("<h3>" + listaP.getProductos(i).getNombres() + "</h3>");%>
                         </div>
                         <div>
-                            <% out.println("<label>Codigo: " + listaP.getProductos(i).getId() + "</label>");%>
+                            <% out.println("<h4>Codigo: " + listaP.getProductos(i).getId() + "</h4>");%>
 
                         </div>
                         <% boolean existe = false;
@@ -170,20 +176,19 @@
                             }
                             if (existe == false) {
                         %>
-                        <img src="vistas/foto.jsp?idproducto=<%=rs.getInt("idProducto")%>" class="img-responsive img-fluid imagen " style="width: 9em; height: 9em" >
+                        <img src="vistas/foto.jsp?idproducto=<%=rs.getInt("idProducto")%>" class="img-responsive img-fluid imagen " style="width: 13em; height: 13em" >
                         <%
                         } else {
                         %>
-                        <img src="ControladorIMG?id=<%=rs.getInt("idProducto")%>" class="img-responsive img-fluid imagen "  style="width: 9em; height: 9em" >
+                        <img src="ControladorIMG?id=<%=rs.getInt("idProducto")%>" class="img-responsive img-fluid imagen "  style="width: 13em; height: 13em" >
                         <%  }%>
                         <div>
-                            <% out.println("<i>Precio: " + listaP.getProductos(i).getPrecio() + "</i>"); %>
+                            <% out.println("<h4>Precio: " + listaP.getProductos(i).getPrecio() + "</h4>"); %>
                         </div>
 
                     </div>
                     <div class=" flip-card-back">
-                        <% out.println("<p>" + listaP.getProductos(i).getDescripcion() + "</p");%>
-
+                        <% out.println("<h4>" + listaP.getProductos(i).getDescripcion() + "</h4>");%>
                         <div>
                             <br> 
                             <%
@@ -215,7 +220,7 @@
             style="background-color:  #bff2eb"
             >
             <!-- Grid container -->
-            <div class="container p-2 pb-0">
+            <div class="container p-2 pb-0 border border-dark">
                 <!-- Section: Links -->
                 <section class="">
                     <!--Grid row-->
@@ -258,15 +263,15 @@
 
                         <!-- Grid column -->
                         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
                             <p><i class="fas fa-home mr-3"></i> Medellin, Antioquia, COL</p>
                             <p><i class="fas fa-envelope mr-3"></i> info@domiprotection.com</p>
                             <p><i class="fas fa-phone mr-3"></i> + 57 3504689979</p>
-                            
+
                         </div>
                         <!-- Grid column -->
 
-                      
+
                     </div>
                     <!--Grid row-->
                 </section>
@@ -274,7 +279,7 @@
             </div>
             <!-- Grid container -->
 
-          
+
         </footer>
         <!-- Footer -->
     </div>

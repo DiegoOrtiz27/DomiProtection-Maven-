@@ -45,7 +45,7 @@ public class ClienteMock {
     public void agregarCliente() {
         Cliente c = new Cliente();
         c.setDni("71731661");
-        c.setNombre("Ossman Munoz");
+        c.setNombre("nuevi");
         c.setDireccion("cra 51");
         c.setTelefono("6543256");
         c.setCorreo("ossman@gmail.com");

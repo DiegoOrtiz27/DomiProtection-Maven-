@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Cliente.ClienteMock
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.433 sec
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.723 sec
->>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.734 sec - in Cliente.ClienteMock

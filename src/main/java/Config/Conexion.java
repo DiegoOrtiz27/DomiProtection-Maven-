@@ -22,17 +22,17 @@ import java.sql.Statement;
 public class Conexion {
 
         Connection con;
-//          String url = "jdbc:mysql://localhost:3306/domi";
-//            String Driver = "com.mysql.jdbc.Driver";
-//            String user = "root";
-//            String pass = "";
+          String url = "jdbc:mysql://localhost:3306/domi";
+            String Driver = "com.mysql.jdbc.Driver";
+            String user = "root";
+            String pass = "";
 
    
   
-    String url = "jdbc:mysql://bwwfslugrk1aszg2nflb-mysql.services.clever-cloud.com:3306/bwwfslugrk1aszg2nflb";
-    String Driver = "com.mysql.jdbc.Driver";
-    String user = "ufouweuqwopzudsm";
-    String pass = "RdxOZ0fyl2oGktU1iSUj";
+//    String url = "jdbc:mysql://bwwfslugrk1aszg2nflb-mysql.services.clever-cloud.com:3306/bwwfslugrk1aszg2nflb";
+//    String Driver = "com.mysql.jdbc.Driver";
+//    String user = "ufouweuqwopzudsm";
+//    String pass = "RdxOZ0fyl2oGktU1iSUj";
 
     public Connection getConnection() {
         try {

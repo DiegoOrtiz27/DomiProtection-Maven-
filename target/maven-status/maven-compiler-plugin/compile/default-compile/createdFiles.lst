@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 Modelo\m.class
 Config\Conexion.class
 Modelo\ClienteDAO.class
@@ -16,4 +14,3 @@ Modelo\Cliente.class
 Modelo\VentaDAO.class
 Controlador\Controlador.class
 Modelo\Producto.class
->>>>>>> cc2c48752af0ac6909fd6069555cf8959794cdd0
