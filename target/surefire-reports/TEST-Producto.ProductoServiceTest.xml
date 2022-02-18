@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Producto.ProductoServiceTest" time="0.156" tests="3" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Producto.ProductoServiceTest" time="0.264" tests="3" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -62,19 +62,19 @@
     <property name="netbeans.deploy.clientUrlPart" value="/index.jsp"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testUpdateProducto" classname="Producto.ProductoServiceTest" time="0.121">
+  <testcase name="testUpdateProducto" classname="Producto.ProductoServiceTest" time="0.189">
     <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<true> but was:<false>
 	at Producto.ProductoServiceTest.testUpdateProducto(ProductoServiceTest.java:54)
 ]]></failure>
     <system-out><![CDATA[Producto no existe(Update)
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteProducto" classname="Producto.ProductoServiceTest" time="0.031">
+  <testcase name="testDeleteProducto" classname="Producto.ProductoServiceTest" time="0.027">
     <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<true> but was:<false>
 	at Producto.ProductoServiceTest.testDeleteProducto(ProductoServiceTest.java:59)
 ]]></failure>
     <system-out><![CDATA[Producto no existe(Delete)
 ]]></system-out>
   </testcase>
-  <testcase name="testAddProducto" classname="Producto.ProductoServiceTest" time="0.003"/>
+  <testcase name="testAddProducto" classname="Producto.ProductoServiceTest" time="0.043"/>
 </testsuite>

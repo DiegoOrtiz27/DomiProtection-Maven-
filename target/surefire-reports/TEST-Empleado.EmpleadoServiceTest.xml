@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Empleado.EmpleadoServiceTest" time="2.972" tests="3" errors="0" skipped="0" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Empleado.EmpleadoServiceTest" time="3.448" tests="3" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -62,7 +62,7 @@
     <property name="netbeans.deploy.clientUrlPart" value="/index.jsp"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testDeleteEmpleado" classname="Empleado.EmpleadoServiceTest" time="2.771">
+  <testcase name="testDeleteEmpleado" classname="Empleado.EmpleadoServiceTest" time="3.171">
     <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<true> but was:<false>
 	at Empleado.EmpleadoServiceTest.testDeleteEmpleado(EmpleadoServiceTest.java:58)
 ]]></failure>
@@ -71,7 +71,7 @@
     <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 ]]></system-err>
   </testcase>
-  <testcase name="testAddEmpleado" classname="Empleado.EmpleadoServiceTest" time="0.001">
+  <testcase name="testAddEmpleado" classname="Empleado.EmpleadoServiceTest" time="0.002">
     <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<true> but was:<false>
 	at Empleado.EmpleadoServiceTest.testAddEmpleado(EmpleadoServiceTest.java:42)
 ]]></failure>
@@ -80,7 +80,7 @@ true
 El empleado ya esta agregado(Agregar)
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateEmpleado" classname="Empleado.EmpleadoServiceTest" time="0.019">
+  <testcase name="testUpdateEmpleado" classname="Empleado.EmpleadoServiceTest" time="0.029">
     <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<true> but was:<false>
 	at Empleado.EmpleadoServiceTest.testUpdateEmpleado(EmpleadoServiceTest.java:53)
 ]]></failure>

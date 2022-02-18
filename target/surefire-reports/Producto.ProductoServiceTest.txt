@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: Producto.ProductoServiceTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.156 sec <<< FAILURE! - in Producto.ProductoServiceTest
-testUpdateProducto(Producto.ProductoServiceTest)  Time elapsed: 0.121 sec  <<< FAILURE!
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.264 sec <<< FAILURE! - in Producto.ProductoServiceTest
+testUpdateProducto(Producto.ProductoServiceTest)  Time elapsed: 0.189 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<true> but was:<false>
 	at Producto.ProductoServiceTest.testUpdateProducto(ProductoServiceTest.java:54)
 
-testDeleteProducto(Producto.ProductoServiceTest)  Time elapsed: 0.031 sec  <<< FAILURE!
+testDeleteProducto(Producto.ProductoServiceTest)  Time elapsed: 0.027 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<true> but was:<false>
 	at Producto.ProductoServiceTest.testDeleteProducto(ProductoServiceTest.java:59)
 

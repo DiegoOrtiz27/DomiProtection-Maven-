@@ -56,7 +56,7 @@ public class ClienteMock {
    @Test
     public void actualizarCliente() {
         Cliente c = new Cliente();
-        c.setId(6);
+        c.setId(30);
         c.setDni("71731661");
         c.setNombre("Ossman Munoz actualizado");
         c.setDireccion("cra 51");
@@ -71,13 +71,13 @@ public class ClienteMock {
 
     @Test
     public void verCliente() {
-        boolean resultado = clienteDao.buscar1("10236229034");
+        boolean resultado = clienteDao.buscar1("1023622903");
         assertEquals(resultado, true);
     }
 
     @Test
     public void eliminarCliente() {
-        int id = 4;
+        int id = 31;
 
         assertEquals(true, clienteDao.delete1(id));
     }

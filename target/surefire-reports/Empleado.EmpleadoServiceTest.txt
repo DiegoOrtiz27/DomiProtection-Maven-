@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: Empleado.EmpleadoServiceTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.972 sec <<< FAILURE! - in Empleado.EmpleadoServiceTest
-testDeleteEmpleado(Empleado.EmpleadoServiceTest)  Time elapsed: 2.771 sec  <<< FAILURE!
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.448 sec <<< FAILURE! - in Empleado.EmpleadoServiceTest
+testDeleteEmpleado(Empleado.EmpleadoServiceTest)  Time elapsed: 3.171 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<true> but was:<false>
 	at Empleado.EmpleadoServiceTest.testDeleteEmpleado(EmpleadoServiceTest.java:58)
 
-testAddEmpleado(Empleado.EmpleadoServiceTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+testAddEmpleado(Empleado.EmpleadoServiceTest)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<true> but was:<false>
 	at Empleado.EmpleadoServiceTest.testAddEmpleado(EmpleadoServiceTest.java:42)
 
-testUpdateEmpleado(Empleado.EmpleadoServiceTest)  Time elapsed: 0.019 sec  <<< FAILURE!
+testUpdateEmpleado(Empleado.EmpleadoServiceTest)  Time elapsed: 0.029 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<true> but was:<false>
 	at Empleado.EmpleadoServiceTest.testUpdateEmpleado(EmpleadoServiceTest.java:53)
 
